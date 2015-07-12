@@ -1,6 +1,6 @@
 import os
 
-from flask import Flask, render_template
+from flask import Flask, render_template, url_for
 from werkzeug import cached_property
 import markdown
 import yaml
@@ -10,15 +10,16 @@ POSTS_FILE_EXTENSION = '.md'
 app = Flask(__name__)
 
 class Post(object):
-    def __init__(self, path):
-        self.path = path
+    def __init__(self, path, root_dir=''):
+        self.url_path = os.path.splitext(path.strip('/'))[0]
+        self.file_path = os.path.join(root_dir, path.strip('/'))
         self._initialise_metadata()
 
     def _initialise_metadata(self):
         content = ''
         first_separator = False
 
-        with open(self.path, 'r') as fin:
+        with open(self.file_path, 'r') as fin:
             for line in fin:
                 if line.strip() == '---':
                     if first_separator:
@@ -33,10 +34,16 @@ class Post(object):
 
     @cached_property
     def html(self):
-        with open(self.path, 'r') as fin:
+        with open(self.file_path, 'r') as fin:
             content = fin.read().split('---', 2)[2].strip()
 
         return markdown.markdown(content)
+
+    @property
+    def url(self):
+        return url_for('post', path=self.url_path)
+
+
 
 @app.template_filter('date')
 def format_date(value, format='%B %d, %Y'):
@@ -52,15 +59,16 @@ def format_date(value, format='%B %d, %Y'):
 
 @app.route('/')
 def index():
-    return 'Hello World'
+    posts = [Post('hello.md', root_dir='posts')]
+
+    return render_template('index.html', posts=posts)
 
 @app.route('/blog/<path:path>')
 def post(path):
     # raise # Breakpoint for werkzeug, browser-based
     # import ipdb; ipdb.stack_trace() # Breakpoint for ipdb (needs to be installed), console-based
-    path = os.path.join('posts', path + POSTS_FILE_EXTENSION)
 
-    post = Post(path)
+    post = Post(path + POSTS_FILE_EXTENSION, root_dir='posts')
     return render_template('post.html', post=post)
     # Inject the function straight into the template, use as format_date(value)
     # return render_template('post.html', post=post, format_date=format_date)

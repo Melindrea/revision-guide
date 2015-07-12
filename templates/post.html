@@ -2,11 +2,15 @@
 
 {% block content %}
 <header>
-    <h1>Post title <small>Subtitle</small></h1>
-    <div class="date">date</div>
+    <h1>{{ post.title }}{% if post.subtitle %} <small>{{ post.subtitle }}</small>{% endif %}</h1>
+    <div class="date">{{ post.date }}</div>
 </header>
 
 <div id="post-content">
     {{ post.html|safe }}
 </div>
 {% endblock content %}
+
+{% block head %}
+    <title>{{ post.title }}</title>
+{% endblock head %}

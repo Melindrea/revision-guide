@@ -1,1 +1,3 @@
-generator.pyc
+blog/*.pyc
+*.pyc
+.DS_Store

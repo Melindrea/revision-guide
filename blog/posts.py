@@ -4,19 +4,21 @@ from flask import abort
 from sorteddict import SortedDict
 from post import Post
 
-POSTS_FILE_EXTENSION = '.md'
 
 class Posts(object):
-    def __init__(self, app, root_dir, file_ext=POSTS_FILE_EXTENSION):
-        self.root_dir = root_dir
-        self.file_ext = file_ext
+    def __init__(self, app, root_dir=None, file_ext=None):
+        self.root_dir = root_dir if root_dir is not None else app.config['POSTS_DIRECTORY']
+        self.file_ext = file_ext if file_ext is not None else app.config['POSTS_FILE_EXTENSION']
         self._app = app
         self._cache = SortedDict(key=lambda p: p.date, reverse=True)
         self._initialise_cache()
 
     @property
     def posts(self):
-        return self._cache.values()
+        if self._app.debug:
+            return self._cache.values()
+        else:
+            return [post for post in self._cache.values() if post.published]
 
     def get_post_or_404(self, path):
         """ Returns the post object for given path, or raises a NotFound exception

@@ -19,7 +19,7 @@ def format_date(value, format='%B %d, %Y'):
 def index():
     return render_template('index.tpl', posts=posts.posts)
 
-@app.route('/blog/<path:path>')
+@app.route('/blog/<path:path>/')
 def post(path):
     # raise # Breakpoint for werkzeug, browser-based
     # import ipdb; ipdb.stack_trace() # Breakpoint for ipdb (needs to be installed), console-based

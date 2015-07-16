@@ -1,6 +1,7 @@
 ---
 title: Hello World
 date: 2015-07-16
+published: true
 ---
 
 # Hello World

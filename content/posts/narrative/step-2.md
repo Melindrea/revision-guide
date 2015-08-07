@@ -1,7 +1,8 @@
 ---
-title: 2.2 Character development
+title: Character development
 published: true
 date: 2015-07-30
+step: 2.2
 ---
 
 ### Practice

@@ -42,4 +42,18 @@ class SortedDict(collections.MutableMapping):
 
     def next(self, key):
         numeric_index = self._keys.index(key);
-        return self._keys[numeric_index + 1]
+
+        try:
+            next_key = self._keys[numeric_index + 1]
+            return self._items[next_key]
+        except IndexError:
+            return None
+
+    def previous(self, key):
+        numeric_index = self._keys.index(key);
+
+        if numeric_index == 0:
+            return None
+
+        previous_key = self._keys[numeric_index - 1]
+        return self._items[previous_key]

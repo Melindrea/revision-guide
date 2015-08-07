@@ -1,7 +1,8 @@
 ---
-title: 2.5 Chapter/act division
+title: Chapter/act division
 published: true
 date: 2015-07-30
+step: 2.5
 ---
 
 ### Theory

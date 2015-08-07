@@ -1,16 +1,18 @@
 {% extends "base.tpl" %}
 
 {% block content %}
-<header>
-    <h1>{{ post.title }}{% if post.subtitle %} <small>{{ post.subtitle }}</small>{% endif %}</h1>
-    <div class="date">Last updated: {{ post.date|date }}</div>
-</header>
-
 <div>
     {{ post.html|safe }}
+
+    {% if next %}
+    <p>Next: {{ next.title }} - {{ next.url }}</p>
+    {% endif %}
+    {% if previous %}
+    <p>Previous: {{ previous.title }} - {{ previous.url }}</p>
+    {% endif %}
 </div>
 {% endblock content %}
 
 {% block head %}
-    <title>{{ post.title }}</title>
+    <title>{{ post.step }} {{ post.title }}</title>
 {% endblock head %}

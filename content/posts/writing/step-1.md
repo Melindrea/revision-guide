@@ -1,7 +1,9 @@
 ---
-title: 1.1 First draft and pre-first draft
+title: First draft and pre-first draft
 published: true
 date: 2015-07-30
+step: 1.1
+summary: "Words on paper, aka First Draft"
 ---
 
 ## Theory

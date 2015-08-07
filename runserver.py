@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 
 import sys
-
 from flask.ext.frozen import Freezer
 from blog import app
 

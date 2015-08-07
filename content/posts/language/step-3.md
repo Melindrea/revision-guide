@@ -1,7 +1,8 @@
 ---
-title: 3.3 Narrative Voice
+title: Narrative Voice
 published: true
 date: 2015-07-30
+step: 3.3
 ---
 
 ### Theory

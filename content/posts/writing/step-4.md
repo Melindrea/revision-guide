@@ -1,7 +1,8 @@
 ---
-title: 1.4 Scene-Sequel Pattern
+title: Scene-Sequel Pattern
 published: true
 date: 2015-07-30
+step: 1.4
 ---
 
 ### Theory

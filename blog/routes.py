@@ -23,12 +23,29 @@ def md(content):
 def safe_content(filename):
     file_path = app.config['PAGES_DIRECTORY'] + '/' + filename + app.config['PAGES_FILE_EXTENSION']
     with open(file_path, 'r') as fin:
-            content = fin.read().split('---', 2)[2].strip()
+        content = fin.read().split('---', 2)[2].strip()
+
     return markdown.markdown(content, extensions=['codehilite'])
 
 @app.route('/')
 def index():
-    return render_template('index.tpl', content=safe_content('index'))
+    return render_template(
+        'index.tpl',
+        content=safe_content('index'),
+        title='Revision &amp; Writing Guide',
+        summary='A guide to <em>my</em> process, with tips, tricks and resources.',
+        active_menu_item = 'index'
+    )
+
+@app.route('/<category>/')
+def category_index(category):
+    return render_template(
+        'category.tpl',
+        category=category,
+        posts=posts.get_posts_by_category(category),
+        title=category.title(),
+        active_menu_item = category
+    )
 
 @app.route('/posts/<path:path>/')
 def post(path):
@@ -36,6 +53,15 @@ def post(path):
     # import ipdb; ipdb.stack_trace() # Breakpoint for ipdb (needs to be installed), console-based
 
     post = posts.get_post_or_404(path)
-    return render_template('post.tpl', post=post)
+    title = '<small>' + str(post.step) + '</small> ' + post.title
+    return render_template(
+        'post.tpl',
+        post=post,
+        next=posts.next_post(path),
+        previous=posts.previous_post(path),
+        title=title,
+        summary=post.summary,
+        active_menu_item = post.category
+    )
     # Inject the function straight into the template, use as format_date(value)
     # return render_template('post.tpl', post=post, format_date=format_date)

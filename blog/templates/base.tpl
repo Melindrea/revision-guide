@@ -29,19 +29,30 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="/">Home</a></li>
-            <li><a href="/writing">Writing</a></li>
-            <li><a href="/narrative">Narrative</a></li>
-            <li><a href="/language">Language</a></li>
+            <li{% if active_menu_item == 'index' %} class="active"{% endif %}><a href="/">Home</a></li>
+            <li{% if active_menu_item == 'writing' %} class="active"{% endif %}><a href="/writing">Writing</a></li>
+            <li{% if active_menu_item == 'narrative' %} class="active"{% endif %}><a href="/narrative">Narrative</a></li>
+            <li{% if active_menu_item == 'language' %} class="active"{% endif %}><a href="/language">Language</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
 
     <main id="content">
+        <header class="jumbotron">
+          <div class="container">
+            <h1>{{ title|safe }}</h1>
+            {% if summary %}
+                <p>{{ summary|safe }}</p>
+            {% endif %}
+          </div>
+        </header>
+
+    <div class="container">
     {% block content %}
 
     {% endblock content %}
+    </div>
     </main>
     <footer role="contentinfo">
     </footer>

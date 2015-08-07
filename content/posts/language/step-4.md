@@ -1,7 +1,8 @@
 ---
-title: 3.4 Remove filter words & adverbs
+title: Remove filter words & adverbs
 published: true
 date: 2015-07-30
+step: 3.4
 ---
 
 ### Theory
@@ -10,7 +11,7 @@ Filter words are things that either a) doesn't add anything to the narrative, or
 I use Rayne Hall's book *The Word-Loss Diet* for this, as well as trying to compile a list of words for myself.
 
 #### Adding nothing
-Consider the word *then*, such as in "if there's a will, then there's a way". That sentence can be writtenas: "if there's a will, there's a way", and won't lose any meaning. You can also consider words such as *really*, *very*, *totally*, *so*. If they're used as an intensifier, does that say anything that the item itself doesn't?
+Consider the word *then*, such as in "if there's a will, then there's a way". That sentence can be written as: "if there's a will, there's a way", and won't lose any meaning. You can also consider words such as *really*, *very*, *totally*, *so*. If they're used as an intensifier, does that say anything that the item itself doesn't?
 
 #### Barrier between Point of View and reader
 Anything that reminds the reader that they're reading a narrative can jolt them out of the story. Examples of those filter words:

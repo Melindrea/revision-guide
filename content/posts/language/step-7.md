@@ -1,7 +1,8 @@
 ---
-title: 3.7 Evaluate the rhythm of each unit
+title: Evaluate the rhythm of each unit
 published: true
 date: 2015-07-30
+step: 3.7
 ---
 
 ## Theory

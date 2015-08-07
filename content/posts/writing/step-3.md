@@ -1,7 +1,8 @@
 ---
-title: 1.3 Plot points and word count
+title: Plot points and word count
 published: true
 date: 2015-07-30
+step: 1.3
 ---
 
 ## Theory

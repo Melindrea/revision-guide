@@ -1,7 +1,8 @@
 ---
-title: 1.2 Structure and usefulness of scenes
+title: Structure and usefulness of scenes
 published: true
 date: 2015-07-30
+step: 1.2
 ---
 
 ## Theory

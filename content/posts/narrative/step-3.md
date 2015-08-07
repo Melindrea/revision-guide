@@ -1,7 +1,8 @@
 ---
-title: 2.3 Scenes-by-paragraph
+title: Scenes-by-paragraph
 published: true
 date: 2015-07-30
+step: 2.3
 ---
 
 ### Theory

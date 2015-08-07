@@ -1,6 +1,6 @@
 from flask import Flask
 from posts import Posts
-from config import Config
+# from config import Config
 
 app = Flask(__name__)
 

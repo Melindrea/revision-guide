@@ -1,7 +1,8 @@
 ---
-title: 3.1 Themes & Motifs
+title: Themes & Motifs
 published: true
 date: 2015-07-30
+step: 3.1
 ---
 
 ### Theory

@@ -1,7 +1,8 @@
 ---
-title: 2.4 Pacing
+title: Pacing
 published: true
 date: 2015-07-30
+step: 2.4
 ---
 
 ### Theory

@@ -1,7 +1,8 @@
 ---
-title: 3.6 Repeat step 3 from the Narrative
+title: Repeat step 3 from the Narrative
 published: true
 date: 2015-07-30
+step: 3.6
 ---
 
 ## Theory

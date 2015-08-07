@@ -9,9 +9,10 @@ import string
 class Post(object):
     def __init__(self, path, root_dir=''):
         self.url_path = os.path.splitext(path.strip('/'))[0]
-        self._category = string.split(string.split(self.url_path, '/')[0], '-')[1]
+        self._category = string.split(self.url_path, '/')[0]
         self.file_path = os.path.join(root_dir, path.strip('/'))
         self.published = False
+        self.summary = False
         self._initialise_metadata()
 
     def _initialise_metadata(self):

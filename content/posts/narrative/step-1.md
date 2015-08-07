@@ -1,7 +1,8 @@
 ---
-title: 2.1 Consistency
+title: Consistency
 published: true
 date: 2015-07-30
+step: 2.1
 ---
 
 ### Practice

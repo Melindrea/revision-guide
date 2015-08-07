@@ -3,11 +3,10 @@
 {% block content %}
 <header>
     <h1>{{ post.title }}{% if post.subtitle %} <small>{{ post.subtitle }}</small>{% endif %}</h1>
-    <div class="date">{{ post.date|date }}</div>
-    <div class="date">{{ post.date|date('%Y') }}</div>
+    <div class="date">Last updated: {{ post.date|date }}</div>
 </header>
 
-<div id="post-content">
+<div>
     {{ post.html|safe }}
 </div>
 {% endblock content %}

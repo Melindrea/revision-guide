@@ -1,16 +1,19 @@
 {% extends "base.tpl" %}
 
 {% block content %}
-<header>
-    <h1>My awesome blog</h1>
-</header>
+<header class="jumbotron">
+      <div class="container">
+        <h1>Revision &amp; Writing Guide</h1>
+        <p>A guide to <em>my</em> process, with tips, tricks and resources.</p>
+      </div>
+    </header>
 
-<ul id="posts">
-    {% for post in posts %}
-    <li class="post">
-        <span class="post-date">{{ post.date|date }}</span>
-        <a href="{{ post.url }}" class="post-title">{{ post.title }}{% if post.subtitle%} <small>{{ post.subtitle }}</small>{% endif %}</a>
-    </li>
-    {% endfor %}
-</ul>
+<div class="container">
+    <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                {{ content|safe }}
+            </div>
+    </div>
+</div>
+
 {% endblock content %}

@@ -4,10 +4,12 @@ from werkzeug import cached_property
 from flask import url_for
 import markdown
 import yaml
+import string
 
 class Post(object):
     def __init__(self, path, root_dir=''):
         self.url_path = os.path.splitext(path.strip('/'))[0]
+        self._category = string.split(string.split(self.url_path, '/')[0], '-')[1]
         self.file_path = os.path.join(root_dir, path.strip('/'))
         self.published = False
         self._initialise_metadata()
@@ -39,3 +41,7 @@ class Post(object):
     @property
     def url(self):
         return url_for('post', path=self.url_path)
+
+    @property
+    def category(self):
+        return self._category

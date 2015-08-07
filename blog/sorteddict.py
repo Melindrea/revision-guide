@@ -39,3 +39,7 @@ class SortedDict(collections.MutableMapping):
 
     def __repr__(self):
         return '%s(%s)' % (self.__class__.__name__, self._items)
+
+    def next(self, key):
+        numeric_index = self._keys.index(key);
+        return self._keys[numeric_index + 1]

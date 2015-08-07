@@ -1,0 +1,24 @@
+{
+  "name": "Revision Guide",
+  "version": "0.1.0",
+  "authors": [
+    "Marie Hogebrandt <marie.hogebrandt@pineberry.com>"
+  ],
+  "description": "Guide to how I revise",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootswatch": "~3.3.5+2",
+    "fontawesome": "~4.4.0"
+  },
+  "devDependencies": {
+    "jquery": "~2.1.4"
+  }
+}

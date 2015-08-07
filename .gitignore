@@ -2,3 +2,5 @@ blog/*.pyc
 *.pyc
 .DS_Store
 blog/build
+node_modules
+bower_components

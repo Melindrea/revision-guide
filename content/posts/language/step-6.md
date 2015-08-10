@@ -12,4 +12,4 @@ This time, however, you're also keeping an eye on the pacing, so you don't mess 
 
 ## Practice
 
-[Step 2.3](/link-to-2-3)
+[Step 2.3](/narrative/step-3)

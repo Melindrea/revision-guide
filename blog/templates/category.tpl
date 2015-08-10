@@ -14,3 +14,7 @@
 <p>No posts in that category</p>
 {% endif %}
 {% endblock content %}
+
+{% block title %}
+    Category: {{ title }} / {{ super() }}
+{% endblock title %}

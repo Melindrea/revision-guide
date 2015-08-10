@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-readable.css') }}">
     {% block head %}
-    <title>Småty in the land</title>
+        <title>{% block title %}Småty in the land{% endblock title %}</title>
     {% endblock head %}
 </head>
 <body>

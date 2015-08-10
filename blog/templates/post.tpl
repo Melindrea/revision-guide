@@ -5,14 +5,14 @@
     {{ post.html|safe }}
 
     {% if next %}
-    <p>Next: {{ next.title }} - {{ next.url }}</p>
+    <p>Next: <a href="{{ next.url }}">{% if post.category != next.category %}{{ next.category|capitalize }}: {% endif %}{{ next.title }}</a></p>
     {% endif %}
     {% if previous %}
-    <p>Previous: {{ previous.title }} - {{ previous.url }}</p>
+    <p>Previous: <a href="{{ previous.url }}">{% if post.category != previous.category %}{{ previous.category|capitalize }}: {% endif %}{{ previous.title }}</a></p>
     {% endif %}
 </div>
 {% endblock content %}
 
-{% block head %}
-    <title>{{ post.step }} {{ post.title }}</title>
-{% endblock head %}
+{% block title %}
+    {{ post.step }} {{ post.title }} / {{ super() }}
+{% endblock title %}

@@ -1,5 +1,6 @@
 import os
 
+from datetime import datetime
 from blog import app, posts
 from flask import render_template
 import markdown
@@ -34,7 +35,8 @@ def index():
         content=safe_content('index'),
         title='Revision &amp; Writing Guide',
         summary='A guide to <em>my</em> process, with tips, tricks and resources.',
-        active_menu_item = 'index'
+        active_menu_item = 'index',
+        updated = datetime.now()
     )
 
 @app.route('/<category>/')
@@ -44,7 +46,8 @@ def category_index(category):
         category=category,
         posts=posts.get_posts_by_category(category),
         title=category.title(),
-        active_menu_item = category
+        active_menu_item = category,
+        updated = datetime.now()
     )
 
 @app.route('/posts/<path:path>/')
@@ -61,7 +64,8 @@ def post(path):
         previous=posts.previous_post(path),
         title=title,
         summary=post.summary,
-        active_menu_item = post.category
+        active_menu_item = post.category,
+        updated = post.updated
     )
     # Inject the function straight into the template, use as format_date(value)
     # return render_template('post.tpl', post=post, format_date=format_date)

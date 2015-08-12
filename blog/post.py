@@ -1,5 +1,6 @@
 import os
 
+from datetime import datetime
 from werkzeug import cached_property
 from flask import url_for
 import markdown
@@ -11,6 +12,8 @@ class Post(object):
         self.url_path = os.path.splitext(path.strip('/'))[0]
         self._category = string.split(self.url_path, '/')[0]
         self.file_path = os.path.join(root_dir, path.strip('/'))
+        statbuf = os.stat(self.file_path)
+        self.updated = datetime.fromtimestamp(statbuf.st_mtime)
         self.published = False
         self.summary = False
         self._initialise_metadata()

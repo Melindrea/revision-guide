@@ -2,7 +2,7 @@
 
 import sys
 from flask.ext.frozen import Freezer
-from blog import app
+from guide import app
 
 freezer = Freezer(app)
 

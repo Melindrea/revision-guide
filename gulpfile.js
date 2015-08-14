@@ -11,7 +11,8 @@ var gulp = require('gulp'),
     path =require('path'),
     merge = require('merge-stream'),
     del = require('del'),
-    uglify = require('gulp-uglify');
+    uglify = require('gulp-uglify'),
+    ghPages = require('gulp-gh-pages');
 
 gulp.task('scripts', function(){
     return gulp.src([
@@ -19,20 +20,25 @@ gulp.task('scripts', function(){
         'bower_components/bootstrap/dist/js/bootstrap.js'
     ])
         .pipe(concat('vendor.js'))
-        .pipe(gulp.dest('blog/static/js'))
+        .pipe(gulp.dest('guide/static/js/lib'))
         .pipe(rename('vendor.min.js'))
         .pipe(uglify())
-        .pipe(gulp.dest('blog/static/js'));
+        .pipe(gulp.dest('guide/static/js/lib'));
 });
 
-gulp.task('default', ['js-fef'], function(){});
+gulp.task('deploy', function() {
+    return gulp.src('./build/**/*')
+      .pipe(ghPages({
+        push: false
+      }));
+});
 
 gulp.task('default', ['clean'], function() {
-    gulp.start('fonts', 'styles', 'scripts');
+    gulp.start('fonts', 'bs-styles', 'scripts');
 });
 
 gulp.task('clean', function(cb) {
-    del(['blog/static/css', 'blog/static/js', 'blog/static/less', 'blog/static/img', 'blog/static/fonts'], cb)
+    del(['guide/static/css/lib', 'guide/static/js/lib', 'guide/static/less/lib', 'guide/static/img/lib', 'guide/static/fonts/lib'], cb)
 });
 
 gulp.task('fonts', function() {
@@ -43,10 +49,10 @@ gulp.task('fonts', function() {
     ];
 
     return gulp.src(fileList)
-        .pipe(gulp.dest('blog/static/fonts'));
+        .pipe(gulp.dest('guide/static/fonts/lib'));
 });
 
-gulp.task('styles', function() {
+gulp.task('bs-styles', function() {
 
     var baseContent = '@import "bower_components/bootstrap/less/bootstrap.less";@import "bower_components/bootswatch/$theme$/variables.less";@import "bower_components/bootswatch/$theme$/bootswatch.less";@import "bower_components/bootstrap/less/utilities.less";';
     var isBootswatchFile = function(file) {
@@ -76,19 +82,19 @@ gulp.task('styles', function() {
             return file;
         })))
         .pipe(less())
-        .pipe(gulp.dest('blog/static/css'))
+        .pipe(gulp.dest('guide/static/css/lib'))
         .pipe(gulpif(isBootstrapFile, foreach(function(stream, file) {
             var fileName = path.basename(file.path),
                 themeName = fileName.substring(fileName.indexOf('-') + 1, fileName.indexOf('.'));
 
             // http://stackoverflow.com/questions/21719833/gulp-how-to-add-src-files-in-the-middle-of-a-pipe
             // https://github.com/gulpjs/gulp/blob/master/docs/recipes/using-multiple-sources-in-one-task.md
-            return merge(stream, gulp.src(['blog/static/css/font-awesome.css', 'blog/static/css/main.css']))
+            return merge(stream, gulp.src(['guide/static/css/lib/font-awesome.css', 'guide/static/css/main.css']))
                 .pipe(concat('style-' + themeName + ".css"))
-                .pipe(gulp.dest('blog/static/css'))
+                .pipe(gulp.dest('guide/static/css/lib'))
                 .pipe(rename({suffix: '.min'}))
                 .pipe(minifycss())
-                .pipe(gulp.dest('blog/static/css'));
+                .pipe(gulp.dest('guide/static/css/lib'));
         })))
 });
 

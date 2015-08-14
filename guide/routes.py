@@ -1,7 +1,7 @@
 import os
 
 from datetime import datetime
-from blog import app, posts
+from guide import app, posts
 from flask import render_template
 import markdown
 

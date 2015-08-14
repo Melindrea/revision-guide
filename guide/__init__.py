@@ -7,4 +7,4 @@ app = Flask(__name__)
 app.config.from_envvar('SETTINGS_FILE')
 posts = Posts(app)
 
-import blog.routes
+import guide.routes

@@ -6,8 +6,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-readable.css') }}">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/lib/bootstrap-readable.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/lib/font-awesome.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     {% block head %}
         <title>{% block title %}Småty in the land{% endblock title %}</title>

@@ -34,6 +34,7 @@ I've divided the steps into three different sections.
 2. For each character, ensure consistency in their reaction and development, both for those with a clear character arc and those without
 3. Evaluate scenes on paragraph level, with point of view limitations and Motivation-Reaction Units, including expanding senses
 4. Pacing, which is on a scene level but going into paragraphs/sentences for rhythm and balance
+5. Chapter/Act division, which looks at getting your scenes in order, and your arbitrary story-divisions set up, with hooks in the beginning/end
 
 ### Language
 1. Evaluate and expand on themes and motifs

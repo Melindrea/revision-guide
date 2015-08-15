@@ -63,6 +63,6 @@
         <a href="https://github.com/Melindrea/revision-guide.git">Fork on <i class="fa fa-github"></i></a></p>
       </div>
     </footer>
-    <script src="{{ url_for('static', filename='js/vendor.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/lib/vendor.min.js') }}"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-FREEZER_BASE_URL = 'http://mariehogebrandt.se'
+FREEZER_BASE_URL = 'https://melindrea.github.io/revision-guide'
 FREEZER_DESTINATION = '../../build'
 FREEZER_DESTINATION_IGNORE = ['.git*']
 

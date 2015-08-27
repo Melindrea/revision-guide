@@ -31,10 +31,10 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li{% if active_menu_item == 'index' %} class="active"{% endif %}><a href="/">Home</a></li>
-            <li{% if active_menu_item == 'writing' %} class="active"{% endif %}><a href="/writing">Writing</a></li>
-            <li{% if active_menu_item == 'narrative' %} class="active"{% endif %}><a href="/narrative">Narrative</a></li>
-            <li{% if active_menu_item == 'language' %} class="active"{% endif %}><a href="/language">Language</a></li>
+            <li{% if active_menu_item == 'index' %} class="active"{% endif %}><a href="/revision-guide/">Home</a></li>
+            <li{% if active_menu_item == 'writing' %} class="active"{% endif %}><a href="/revision-guide/writing">Writing</a></li>
+            <li{% if active_menu_item == 'narrative' %} class="active"{% endif %}><a href="/revision-guide/narrative">Narrative</a></li>
+            <li{% if active_menu_item == 'language' %} class="active"{% endif %}><a href="/revision-guide/language">Language</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>

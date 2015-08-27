@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/lib/font-awesome.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     {% block head %}
-        <title>{% block title %}Småty in the land{% endblock title %}</title>
+        <title>{% block title %}Revision Guide for writers{% endblock title %}</title>
     {% endblock head %}
 </head>
 <body>

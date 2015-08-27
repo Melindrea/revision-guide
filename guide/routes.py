@@ -26,7 +26,7 @@ def safe_content(filename):
     with open(file_path, 'r') as fin:
         content = fin.read().split('---', 2)[2].strip()
 
-    return markdown.markdown(content, extensions=['codehilite'])
+    return markdown.markdown(content, extensions=['codehilite', 'smarty'])
 
 @app.route('/')
 def index():

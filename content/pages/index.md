@@ -6,11 +6,13 @@ date: 2015-07-30
 
 This is how I do things. Every step is based on how I work and what my drafts look like. It's very likely that not all these steps will jibe with your way of working. It's even possible that you will not be able to use even a single step here, though if that's the case, you've learned quite a few new ways that don't work for you. That's progress in itself!
 
+I recommend you to read through the guide to get a feeling for it before you start using it, since part of what I like with my process is the division of tasks. For me, it's easier to go through a section several times, with different focus for each time, than to catch **everything** in a single go.
+
 My first draft is generally cohesive with only minor changes in plot/motivations, but sparse in details. I occasionally joke that I can do scenery, dialogue or character motivation, but not two at the same time. So, if your 1st draft is a jumbled mess of changing point of views, changing directions, you'll probably need to start at a different step. This doesn't mean that either of our technique is superior/inferior, it's just recognising that you use different techniques for painting with oil compared to water colour.
 
 I tend to adhere to a three-act-structure, with mapped out plot points and character arcs, though before I start I only have a vague idea on the high and low points. [This article by K.M. Weiland](http://www.writehacked.com/writing/learn-structure-novel-five-minutes/) simplifies the plot points, and that (along with a general idea on where the characters are going) tends to be where I start my first draft. It often also changes, but I can be almost certain that the points I set as "plot points" do happen. They just might end up a lot less important than I originally imagined.
 
-I generally do a close PoV, so any steps about the point of view assumes that it's not omniscent, or shallow. This includes both character voices (as in dialogue) and narrative voices (as in how they perceive their world).
+I generally do a close PoV, so any steps about the point of view assumes that it's not omniscient, or shallow. This includes both character voices (as in dialogue) and narrative voices (as in how they perceive their world).
 
 Beta readers are, in my opinion, key to any author. They're a nice check, and you can use them at almost any stage, as long as you clarify which stage you're at, and what you're wanting out of the beta reading. I feel that you should aim for 2-3 rounds of beta readers before querying, and that it's a good idea to get a diverse group. This is especially true if your story includes marginalized characters; try to get people who belong to the particular group(s) (if you don't) to give input.
 
@@ -44,3 +46,4 @@ I've divided the steps into three different sections.
 5. Spelling- and grammar check. Hemingway app is nice for language structure **suggestions**
 6. Repeat step 3 from the Narrative, keeping in mind the pacing from step 4
 7. Evaluate the rhythm on each unit (word/sentence/etc)
+

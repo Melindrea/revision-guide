@@ -23,6 +23,8 @@ All three of these words are xenophobic, derived from negative stereotypes of a 
 
 Language is powerful, and it's been used to shape a narrative for many years against groups that are so-called outside the norm. Look up your words, ensure you know and understand them.
 
+You wrote them; you own them.
+
 ## Practice
 
 Read it again and again. Test the rhythm, check your words, find the perfect word at the perfect place for every bit of the story. If you have someone who'd listen, that is immensely helpful.
